@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile Creator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Profile Creator</h1>
+      <hr />
+      <p><strong>Student: </strong></p>
+      <p><strong>Student ID: </strong></p>
+      <p><strong>BSc.(Hons) in Computer Science</strong></p>
+      <fieldset id="user-details">
+        <legend>User Details</legend>
+        <label for="user-name">User Name:</label>
+        <input type="text" id="user-name" value="Oliver Brown" /><br />
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          min="0"
+          placeholder="Enter an age above 18"
+        /><span id="age-feedback" class="feedback"></span><br />
+        <label for="status">Student Status:</label>
+        <input type="text" id="status" value="FT UG student" /><br />
+        <label for="subscription">Subscription:</label>
+        <select name="subscription" id="subscription">
+          <option value="Free/Basic £0">Free/Basic £0</option>
+          <option value="Standard £9.99 per/month" selected>
+            Standard £9.99 per/month
+          </option>
+          <option value="Premium £19.99 per/month">
+            Premium £19.99 per/month
+          </option></select
+        ><br />
+        <label for="discount">Annual membership discount:</label>
+        <input
+          type="radio"
+          id="discount-yes"
+          name="discount"
+          value="yes"
+          checked
+        />
+        <label for="discount-yes">Annual membership apply 20% Discount</label
+        ><br />
+        <input type="radio" id="discount-no" name="discount" value="no" />
+        <label for="discount-no">Without Discount</label>
+      </fieldset>
+      <button onclick="submitProfile()">Submit Profile</button>
+      <section class="profile-card">
+        <h2>Your Profile</h2>
+        <hr />
+        <div class="profile-body">
+          <img src="/Lab-based/profile image.png" alt="Profile Image" />
+          <div class="profile-info">
+            <p><strong id="profile-name">[Your Name]</strong></p>
+            <p>
+              <strong>Study: </strong
+              ><span id="profile-study">[Study Status]</span>
+            </p>
+            <p>
+              <strong>Subscription: </strong
+              ><span id="profile-sub">[Your Subscription Choice]</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <h2>Customization</h2>
+      <hr />
+      <p>Change the Background Pattern</p>
+      <div class="patterns" id="patterns">
+        <div
+          class="color-option"
+          onclick="changeBackgroundColor('#f8d7da')"
+        ></div>
+        <div
+          class="color-option"
+          onclick="changeBackgroundColor('#d4edda')"
+        ></div>
+        <div
+          class="color-option"
+          onclick="changeBackgroundColor('#d1ecf1')"
+        ></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
